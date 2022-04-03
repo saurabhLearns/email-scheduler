@@ -1,0 +1,29 @@
+version: '3'
+services:
+  scheduler:
+    image: "saurabhjagtap/email-scheduler"
+    container_name: scheduler
+    depends_on:
+      - mongo
+    expose:
+      - "8000"
+    environment:
+      MONGO_USERNAME: ""
+      MONGO_PASSWORD: ""
+      MONGO_HOST: "mongo"
+      MONGO_URI: "mongo:27017"
+      MONGO_DBNAME: "EMAIL_SCHEDULER"  
+      HOST: "0.0.0.0"
+      PORT: "8000"
+      EMAIL_ID: ""
+      EMAIL_PASSWORD: ""
+      SMTP_SERVER: smtp-mail.outlook.com
+      SMTP_PORT: 587
+  mongo:
+    image: "mongo:4.2.0"
+    container_name: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ""
+      MONGO_INITDB_ROOT_PASSWORD: ""
+    ports:
+      - 27017:27017

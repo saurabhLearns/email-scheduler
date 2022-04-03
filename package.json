@@ -1,0 +1,27 @@
+{
+  "name": "email-scheduler",
+  "version": "1.0.0",
+  "description": "Just a service to schedule emails and send them automatically",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "\\"
+  ],
+  "author": "saurabh619@outlook.com",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^6.0.5",
+    "@hapi/vision": "^6.1.0",
+    "bunyan": "^1.8.15",
+    "cron": "^1.8.2",
+    "dotenv": "^16.0.0",
+    "hapi-swagger": "^14.2.5",
+    "joi": "^17.6.0",
+    "moment": "^2.29.1",
+    "mongoose": "^6.2.5",
+    "nodemailer": "^6.7.2"
+  }
+}
